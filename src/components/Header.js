@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
-import pizzaCover from '../assets/images/pizza-cover.jpg';
+import { Box, Button, Stack, Typography } from '@mui/material';
+import phoneCover from '../assets/images/FallingPhones.jpg';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         position: 'relative',
         width: '100%',
         height: '100vh',
-        backgroundImage: `url(${pizzaCover})`,
+        backgroundImage: `url(${phoneCover})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -41,35 +42,12 @@ const Header = () => {
                 padding: '8px 16px',
               }}
             >
-              Taste the best pizza of Your life!
+              TimeGuard
             </Typography>
           </Box>
-          <ButtonGroup
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Button variant="contained" color="error" size="large">
-              Call now!
-            </Button>
-            <Button
-              variant="outlined"
-              color="error"
-              sx={{
-                background: 'rgba(255,255,255, 0.85);',
-                '&:hover': {
-                  backgroundColor: '#ffffff',
-                  strokeWidth: '2',
-                  stroke: '#fff',
-                },
-              }}
-              size="large"
-            >
-              Explore menu
-            </Button>
-          </ButtonGroup>
+          <Button variant="contained" color="purpel" size="large" component={RouterLink} to="timer">
+            Start a Timer!
+          </Button>
         </Stack>
       </Box>
     </Box>

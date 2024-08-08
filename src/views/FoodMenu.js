@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import {
+import { Box, Container, Typography } from '@mui/material';
+import React from 'react';
+/*import {
   Box,
   Container,
   Typography,
@@ -17,16 +18,6 @@ import {
 import { Favorite, FavoriteBorder, Add, Remove } from '@mui/icons-material';
 import GarlicIcon from '../components/GarlicIcon';
 import HerbsIcon from '../components/HerbsIcon';
-import pizzaVegetarian from '../assets/images/pizza-vegetarian.png';
-import pizzaFourCheese from '../assets/images/pizza-four-cheese.png';
-import pizzaMargherita from '../assets/images/pizza-margherita.png';
-import pizzaBbqChicken from '../assets/images/pizza-bbq-chicken.png';
-import pizzaMushroom from '../assets/images/pizza-mushroom.png';
-import pizzaBuffalo from '../assets/images/pizza-buffalo.png';
-import pizzaMeat from '../assets/images/pizza-meat.png';
-import pizzaHawaiian from '../assets/images/pizza-hawaiian.png';
-import pizzaPeperoni from '../assets/images/pizza-peperoni.png';
-import pizzaSpinach from '../assets/images/pizza-spinach.png';
 
 const pizzas = [
   {
@@ -100,9 +91,12 @@ const pizzas = [
     allergens: 'Dairy, Gluten',
   },
 ];
+tact" element={<Contact />} />
+            <Route path="/food-menu" element={<FoodMenu />} />
+            <Route path="/drink-menu" element={<DrinkMenu />} />
+            <Route index pa*/
 
-const FoodMenu = () => {
-  const [selectedCrust, setSelectedCrust] = useState({});
+/*  const [selectedCrust, setSelectedCrust] = useState({});
   const [favorites, setFavorites] = useState({});
   const [quantity, setQuantity] = useState({});
 
@@ -123,14 +117,21 @@ const FoodMenu = () => {
       setQuantity((prevState) => ({ ...prevState, [index]: prevState[index] - 1 }));
     }
   };
-
+*/
+const FoodMenu = () => {
   return (
-    <Box sx={{ py: 4, background: '#F2F0EA' }}>
-      <Container maxWidth="lg">
+    <Box sx={{ py: 4, background: '#d3dddd' }}>
+      <Container maxWidth="md">
         <Typography variant="h3" gutterBottom>
-          Our Food Menu
+          Coming Soon!
         </Typography>
-        <Grid container spacing={4}>
+      </Container>
+    </Box>
+  );
+};
+
+export default FoodMenu;
+/*        <Grid container spacing={4}>
           {pizzas.map((pizza, index) => (
             <Grid item xs={12} sm={6} key={pizza.name}>
               <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
@@ -231,9 +232,4 @@ const FoodMenu = () => {
             </Grid>
           ))}
         </Grid>
-      </Container>
-    </Box>
-  );
-};
-
-export default FoodMenu;
+      */
